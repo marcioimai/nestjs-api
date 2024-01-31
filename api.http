@@ -1,4 +1,5 @@
 GET http://localhost:3000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNjcxMzE1NSwiZXhwIjoxNzA2NzEzMjE1fQ.V6OX7Z-H3P7g39EbNF07_kWzvvxtdpXq-NKDRbCxvz8
 
 ###
 
@@ -19,12 +20,13 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/orders
-
+Authorization: Bearer fsadfasdfsdf
 
 ###
 
 POST http://localhost:3000/orders
 Content-Type: application/json
+Authorization: Bearer fsadfasdfsdf
 
 {
     "items": [
@@ -40,3 +42,12 @@ Content-Type: application/json
     "card_hash": "123"
 }
 
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "john",
+    "password": "john"
+}
