@@ -15,3 +15,28 @@ Content-Type: application/json
     "image_url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
     "price": 100
 }
+
+###
+
+GET http://localhost:3000/orders
+
+
+###
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "product_id": "091191ba-1225-42f2-a4ae-2fe77e154b93",
+            "quantity": 1
+        },
+        {
+            "product_id": "64187b5b-8471-4ea3-9235-13f33823852b",
+            "quantity": 2
+        }
+    ],
+    "card_hash": "123"
+}
+
