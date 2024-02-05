@@ -13,6 +13,7 @@ const users = [
     password: 'chris',
   },
 ];
+
 @Injectable()
 export class AuthService {
   constructor(private jwtService: JwtService) {}
@@ -28,6 +29,8 @@ export class AuthService {
 
     const payload = { sub: user.id, username: user.username };
 
-    return { access_token: this.jwtService.sign(payload) };
+    return {
+      access_token: this.jwtService.sign(payload),
+    };
   }
 }
